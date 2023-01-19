@@ -31,7 +31,7 @@ const MiApi = ({search}) => {
         <Sail num={num} handleMasPage={handleMasPage} handleMenosPage={handleMenosPage} />
         <div className="container-fluid">
         <div className="row">
-            {nakamas
+            {nakamas.sort((a,b) => a.name.localeCompare(b.name))
             .filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
             .map((nakama) => {
                 return (

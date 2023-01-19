@@ -1,6 +1,6 @@
 
 const Card = ({nakama}) => {
-    const {id,name,image,status,species,type} = nakama;
+    const {name,image,status,species,type} = nakama;
     return (
         <div className="card bg-dark text-white mb-3" id="card">
             <img className="card-img-top" src={image} alt="Card image cap"/>
@@ -9,8 +9,6 @@ const Card = ({nakama}) => {
                 <p className="m-0">{status}</p>
                 <p className="m-0">{species}</p>
                 <p className="m-0">{type}</p>
-                <hr />
-                <a href="#" className="btn btn-primary">Go somewhere</a>
             </div>
          </div>
     )

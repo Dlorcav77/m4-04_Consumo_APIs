@@ -19,9 +19,7 @@ const Sail = ({num,handleMasPage,handleMenosPage}) => {
         <div className='d-flex flex-column-revers justify-content-end m-2'>
           <div>
             {
-              num === 1 ?
-              (<button className="btn btn-success m-2 " disabled>Anterior</button>):
-              (<button className="btn btn-success m-2" onClick={handleMenosPage}>Anterior</button>)
+              num !== 1 && (<button className="btn btn-success m-2" onClick={handleMenosPage}>Anterior</button>)
             }
           </div>
           <div>
@@ -29,9 +27,7 @@ const Sail = ({num,handleMasPage,handleMenosPage}) => {
           </div>
           <div>
             {
-              num === page.pages ?
-              (<button className="btn btn-success m-2" disabled>Siguiente</button>):
-              (<button className="btn btn-success m-2" onClick={handleMasPage}>Siguiente</button>)
+              num !== page.pages && (<button className="btn btn-success m-2" onClick={handleMasPage}>Siguiente</button>)
             }
             </div>
         </div>
